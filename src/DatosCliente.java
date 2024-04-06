@@ -4,14 +4,14 @@ public class DatosCliente {
     public static void main(String[] args) {
 
         String nombreUsuario = "Juan Antonio Ruiz";
-        String tipoDeCuenta = "corriente";
+        String tipoDeCuenta = "Corriente";
         double saldo = 4800.76;
         int opcion = 0;
 
         System.out.println("********************************");
         System.out.println("\nNombre del cliente: " + nombreUsuario);
         System.out.println("El tipo de cuenta es: " + tipoDeCuenta);
-        System.out.println("Su saldo es de: " + "$ " + saldo);
+        System.out.println("Su saldo actual: " + "$ " + saldo);
         System.out.println("\n********************************");
 
         String menu = """
@@ -34,7 +34,7 @@ public class DatosCliente {
                     System.out.println("Cual es el valor a retirar ? ");
                     double valorRetirar = teclado.nextDouble();
                     if( saldo < valorRetirar){
-                        System.out.println("saldo insuficiente");
+                        System.out.println("Saldo insuficiente");
                     }else {
                         saldo = saldo -valorRetirar;
                         System.out.println("El saldo actualizado es: " + saldo);
@@ -44,13 +44,13 @@ public class DatosCliente {
                     System.out.println("Cual es el momto que desea depositar ? ");
                     double valorDepositar = teclado.nextDouble();
                     saldo += valorDepositar;
-                    System.out.println("El saldo actual de su cuenta es: " + saldo);
+                    System.out.println("El saldo actualizado es: " + saldo);
                     break;
                 case 9:
                     System.out.println("Gracias por su preferencia!");
                     break;
                 default:
-                    System.out.println("elija una opcion valida");
+                    System.out.println("Elija una opcion valida");
             }
         }
     }
